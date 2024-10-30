@@ -15,7 +15,9 @@ const Card = ({option}) => {
                 {features.map(feature => <li className="flex gap-1 items-center"><AiFillThunderbolt />
                     {feature}</li>)}
             </ul>
-            <button className="w-full bg-indigo-200 hover:bg-indigo-400 py-2 rounded-lg text-md">Buy Now!</button>
+          <div className="w-full mx-auto">
+          <button className="w-11/12 bg-indigo-200 hover:bg-indigo-400 py-2 rounded-lg text-md">Buy Now!</button>
+          </div>
         </div>
     );
 };
