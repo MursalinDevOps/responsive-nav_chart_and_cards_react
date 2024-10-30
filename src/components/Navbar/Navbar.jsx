@@ -5,11 +5,6 @@ export default function Navbar() {
 
     const [open, setOpen] = useState(false)
 
-    // const toggleNavIcon = () => {
-    //     setOpen(!open)
-    //     console.log(open)
-    // }
-
     const routes = [
         { id: 1, path: "/", name: "Home" },
         { id: 2, path: "/about", name: "About" },
@@ -27,9 +22,9 @@ export default function Navbar() {
                 open ? <IoCloseSharp /> : <RiMenu4Line />
             }
             </div>
-            <ul className={`absolute md:static md:flex right-12 bg-lime-200 rounded-full font-thin ${open ? 'top-14 duration-500' : ' -top-1/4 duration-500 '}`}>
+            <ul className={`absolute md:static md:flex right-12 bg-lime-200 md:rounded-full rounded-lg font-thin ${open ? 'top-14 duration-500' : ' hidden'}`}>
                 {
-                    routes.map(route => <li className="px-10 py-2 hover:underline hover:bg-lime-600 w-full rounded-full md:hover:text-white" key={route.id}>
+                    routes.map(route => <li className="px-10 py-2 hover:underline hover:bg-lime-600 w-full md:rounded-full rounded-lg md:hover:text-white" key={route.id}>
                         <a href={route.path}>{route.name}</a>
                         </li>)
                 }
